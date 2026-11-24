@@ -26,26 +26,26 @@ st.set_page_config(
 # LOAD YOLO MODEL FROM HUGGING FACE
 # --------------------------------------------------
 
+
 @st.cache_resource
 def load_model():
 
     model_path = hf_hub_download(
-        repo_id="Chithanoorimanoj/road-accident-detection",
+        repo_id="Chithanoorimanoj/AI_Based_accident_detection_model",
         filename="best.pt"
     )
 
-    model = YOLO(model_path)
-
-    return model
+    return YOLO(model_path)
 
 
 try:
-    with st.spinner("Loading AI accident detection model..."):
-        model = load_model()
+    model = load_model()
+    st.success("YOLO Model Loaded Successfully!")
 
 except Exception as e:
     st.error(f"Model loading error: {e}")
     st.stop()
+
 
 
 # --------------------------------------------------
