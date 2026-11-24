@@ -5,6 +5,20 @@ from PIL import Image
 from ultralytics import YOLO
 import tempfile
 import os
+import streamlit as st
+from huggingface_hub import hf_hub_download
+from ultralytics import YOLO
+
+@st.cache_resource
+def load_model():
+    model_path = hf_hub_download(
+        repo_id="Chithanoorimanoj/road-accident-detection",
+        filename="best.pt",
+        token=st.secrets.get("HF_TOKEN")
+    )
+    return YOLO(model_path)
+
+model = load_model()
 
 # Page configuration
 st.set_page_config(
