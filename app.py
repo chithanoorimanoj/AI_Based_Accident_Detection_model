@@ -12,7 +12,7 @@ from ultralytics import YOLO
 @st.cache_resource
 def load_model():
     model_path = hf_hub_download(
-        repo_id="Chithanoorimanoj/road-accident-detection",
+        repo_id="Chithanoorimanoj/AI_Based_accident_detection_model",
         filename="best.pt",
         token=st.secrets.get("HF_TOKEN")
     )
