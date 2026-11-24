@@ -1,0 +1,13 @@
+train: /content/train/images
+val: /content/valid/images
+test: /content/test/images
+
+nc: 2
+names: ['minor', 'moderate']
+
+roboflow:
+  workspace: accident-detection-r86jm
+  project: accident-detection-hlstb
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/accident-detection-r86jm/accident-detection-hlstb/dataset/1
