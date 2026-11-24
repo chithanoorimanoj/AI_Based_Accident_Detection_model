@@ -1,5 +1,6 @@
 streamlit
 ultralytics
+huggingface_hub
 opencv-python-headless
 numpy<2
 pandas
@@ -7,4 +8,3 @@ Pillow
 scikit-learn
 joblib
 matplotlib
-huggingface_hub
